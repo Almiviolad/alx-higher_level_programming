@@ -4,4 +4,4 @@ for i in range(10):
         if (j > i and (i != 8 or j != 9)):
             print("{}{}".format(i, j), end=", ")
         elif (i == 8 and j == 9):
-            print("{}{}\n".format(i, j))
+            print("{}{}".format(i, j))
