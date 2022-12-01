@@ -1,4 +1,4 @@
-#include "list.h"
+#include "lists.h"
 /**
  *insert_node - inserta a number node into a sorted linked list
  *@head: pointer to the first nide of the list
@@ -11,19 +11,19 @@ listint_t *insert_node(listint_t **head, int number)
 	listint_t *current = *head;
 	listint_t *former;
 	int diff = 0;
-	
+
 	new = malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
 	new->n = number;
-	new->next = NULL;	
+	new->next = NULL;
 	if (*head == NULL)
 		*head = new;
 	else
 	{
 		while (current->next)
 		{
-			diff = new->n - current ->n;
+			diff = new->n - current->n;
 			if (diff >= 0 && (new->n - (current->next->n)) > 0)
 				current = current->next;
 			else
