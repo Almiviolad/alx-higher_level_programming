@@ -5,5 +5,6 @@ def best_score(a_dictionary):
         break
     for i in a_dictionary:
         if (a_dictionary[i] > max):
-            max = i
-    return max
+            max = a_dictionary[i]
+            res = i
+    return res
