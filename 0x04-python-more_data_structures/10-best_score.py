@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
+    if (a_dictionary == {} or a_dictionary == None):
+        return None
     max_name = None
-    if (a_dictionary == {}):
-        return max_name
     for i in a_dictionary:
         max = a_dictionary[i]
         break
