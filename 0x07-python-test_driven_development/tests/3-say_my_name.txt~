@@ -1,0 +1,60 @@
+=======================
+How to use say_my_name()
+=======================
+This module offers help on how to use tye say_my_name function.
+======
+Usage
+ =====
+say_my_name(first_name, last_name)
+The function accepts strings and print out a formatted text: 'My name is <first_name> <last_name'
+
+::
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+    >>> say_my_name("Michael", "Aloh")
+    My name is Michael Aloh
+
+Empty last_name
+=============
+The default last_name is Empty string. So an empty last_name as an arg will print only the first name
+::
+
+    >>> say_my_name("Joe")
+    My name is Joe
+
+Empty first_name
+=============
+The firat name is a mandatoryarg. There is no default value for it. Empty first_name results im error
+::
+
+    >>> say_my_name(last_name = "Segun")
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Non string args
+============
+The function accepts only string args, any other tyoe results in typeerror
+::
+
+    >>> say_my_name(2, "Derriick")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+::
+
+    >>> say_my_name(0+&, "Walter")
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+The arguments must be enclosed  in a double quotation mark, unless error will occur
+::
+
+    >>> say_my_name(michael, Sally)
+    Traceback (most recent call last):    NameError: name 'michael' is not defined
+
+No arg
+======
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
