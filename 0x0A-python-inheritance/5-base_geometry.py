@@ -2,6 +2,8 @@
 """
     Define an empty class called base geonetry
 """
+
+
 class BaseGeometry:
     """Represent a BaseGeometry class"""
     pass

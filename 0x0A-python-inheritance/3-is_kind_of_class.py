@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-   Define a function that check if an object is an instance of a class if an inheritance is direct or indirect
-"""
+   Define a function of direct and indirect inheritance """
+
+
 def is_kind_of_class(obj, a_class):
     """
     checks if an obj inherits directly from a class

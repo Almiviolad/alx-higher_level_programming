@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-   Defines a function to check if an object ia a instance of a class, direct or indirect inheritance
-"""
+   Defines a function to check if an  ia """
+
+
 def inherits_from(obj, a_class):
     """
     Checks if an obj inherits directly or indirectly from a class

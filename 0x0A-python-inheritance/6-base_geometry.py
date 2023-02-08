@@ -2,6 +2,8 @@
 """
     Defines a class based on BaseGeometry class
 """
+
+
 class BaseGeometry:
     """
     class about the geometry of shapes

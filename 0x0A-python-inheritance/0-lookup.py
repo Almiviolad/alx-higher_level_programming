@@ -2,6 +2,8 @@
 """
 The definition of the function that lokup the method and attributeof a class
 """
+
+
 def lookup(obj):
     """Returns ge list of atributes and methods of class
     Args:
