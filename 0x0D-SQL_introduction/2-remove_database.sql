@@ -1,2 +1,2 @@
 -- Deletes database if it exists --
-DROP DATABASE IF EXISTS "Hbtn_0c_0";
+DROP DATABASE IF EXISTS `hbtn_0c_0`;
