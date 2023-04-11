@@ -1,0 +1,4 @@
+#!/usr/bin/node
+const firstArg = process.argv2;
+const secArg = process.argv3;
+console.log(firstArg + ' is ' + secArg);
