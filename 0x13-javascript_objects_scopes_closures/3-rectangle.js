@@ -9,15 +9,16 @@ class Rectangle {
     if (w > 0 && h > 0) {
       this.width = w;
       this.height = h;
-      this.print = function () {
-        for (let i = 0; i < h; i++) {
-          let wid = '';
-          for (let j = 0; j < w; j++) {
-            wid += 'X';
-          }
-          console.log(wid);
-        }
-      };
+    }
+  }
+
+  print () {
+    for (let i = 0; i < this.height; i++) {
+      let wid = '';
+      for (let j = 0; j < this.width; j++) {
+        wid += 'X';
+      }
+      console.log(wid);
     }
   }
 } module.exports = Rectangle;
