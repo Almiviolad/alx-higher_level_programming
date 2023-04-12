@@ -1,15 +1,24 @@
 #!/usr/bin/node
 const length = process.argv.length;
-let greatest = 0;
-let formerGreatest = 0;
+const first = parseInt(process.argv[2]);
+let greatest = first;
+let diff = Infinity;
+let secg = first;
 if (length === 2 || length === 3) {
   console.log(0);
 } else {
-  for (let i = 2; i < length; i++) {
-    if (parseInt(process.argv[i]) > greatest) {
-      formerGreatest = greatest;
-      greatest = process.argv[i];
+    for (let i = 2; i < length; i++) {
+      let current = parseInt(process.argv[i]);
+	if (current > greatest) {
+	    secg = greatest;
+	greatest = current;}
+	else if ((greatest - current) < diff && greatest - current != 0) {
+	  diff = greatest - current;
+	}
     }
-  }
-  console.log(formerGreatest);
+    if (greatest -diff === -Infinity) {
+	console.log(secg);
+    }
+    else {
+	console.log(greatest - diff);}
 }
