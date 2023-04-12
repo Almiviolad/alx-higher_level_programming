@@ -16,7 +16,7 @@ if (length === 2 || length === 3) {
       diff = greatest - current;
     }
   }
-    if ((greatest - diff === -Infinity) || (greatest - diff < secg && secg != greatest)) {
+    if ((greatest - diff === -Infinity) || (greatest - diff < secg && secg !== greatest)) {
     console.log(secg);
   } else {
     console.log(greatest - diff);
