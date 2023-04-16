@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This module prints all states that begins with N
+This module prints all states that matches tge 4th argument
 """
 import MySQLdb
 import sys
@@ -13,7 +13,7 @@ if __name__ == "__main__":
         host="localhost", port=3306)
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY sys.argv[4] \\
+        "SELECT * FROM states WHERE name LIKE BINARY sys.argv[4] \
 ORDER BY states.id ASC")
     states_row = cur.fetchall()
     for states in states_row:
