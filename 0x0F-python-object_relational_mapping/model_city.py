@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""class definitions of city"""
+from model_state import Base, State
+from sqlalchemy import Column, String, Integer, ForeignKey
+
+
+class City(Base):
+    """ Defines city class
+    Attributes:
+    Id (int): city id
+    name (str): city name
+    state_id = state id the city belongs
+    """
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
+    name = Column(String(128), nullable=False)
+    state_idf = Column(Integer, ForeignKey('states.id'), nullable=False)

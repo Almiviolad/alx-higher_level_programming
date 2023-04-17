@@ -15,4 +15,3 @@ class State(Base):
     __tablename__ = 'states'
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=True)
     name = Column(String(128), nullable=False)
-    cascade = "all, delete, delete-orphan"
