@@ -16,5 +16,5 @@ if __name__ == '__main__':
     f_state = session.query(State).order_by(State.id).filter(
         State.name.contains('a'))
     if (f_state is not None):
-        for state in f_states:
+        for state in f_state:
             print("{}: {}".format(state.id, state.name))
