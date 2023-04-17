@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""prints states that contains a"""
+"""prints states that matches 4th arg"""
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sys import argv
@@ -16,6 +16,6 @@ if __name__ == '__main__':
     f_state = session.query(State).order_by(State.id).filter(
         State.name == argv[4]).first()
     if (f_state is not None):
-        print("{}: {}".format(f_state.id, f_state.name))
+        print(f_state.id)
     else:
         print("Not found")
