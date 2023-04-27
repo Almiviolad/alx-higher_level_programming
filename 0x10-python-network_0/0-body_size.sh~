@@ -1,3 +1,0 @@
-#!/bin/bash
-# prints the content s"ize of a url
-echo "$(curl -sI $1 | grep -iF 'Content-Length'|tr -dc '0-9')"
