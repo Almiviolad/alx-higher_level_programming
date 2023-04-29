@@ -7,6 +7,7 @@ if __name__ == '__main__':
     import sys
     with urllib.request.urlopen(sys.argv[1]) as resp:
         body = resp.headers.items()
+        #later found resp.headers['key']
         for key, value in body:
             if key == "X-Request-Id":
                 print(value)
