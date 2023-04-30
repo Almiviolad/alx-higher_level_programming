@@ -3,12 +3,10 @@
 and displays the body of the response (decoded in utf-8)."""
 if __name__ == '__main__':
     import requests
-    import requests.exceptions
     import sys
     url = sys.argv[1]
-    try:
-        req = requests.get(url)
-        print(req.text)
-        req.raise_for_status()
-    except requests.exceptions.HTTPError as err:
+    req = requests.get(url)
+    if req.status_code >= 400:
         print('Error code: {}'.format(req.status_code))
+    else:
+        print(req.text)
