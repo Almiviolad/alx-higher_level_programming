@@ -6,7 +6,7 @@ if __name__ == '__main__':
     import sys
     import requests
     letter = sys.argv[1]
-    if letter:
+    if len(sys.argv) == 2:
         payload = {'q': letter}
     else:
         payload = {'q': ""}
