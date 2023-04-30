@@ -5,9 +5,9 @@ with the letter as a parameter."""
 if __name__ == '__main__':
     import sys
     import requests
-    letter = sys.argv[1]
-    if len(sys.argv) == 2:
-        payload = {'q': letter}
+
+    if len(sys.argv) > 1:
+        payload = {'q': sys.argv[1]}
     else:
         payload = {'q': ""}
     r = requests.post('http://0.0.0.0\
