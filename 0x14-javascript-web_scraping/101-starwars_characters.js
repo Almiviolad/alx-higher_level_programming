@@ -14,8 +14,7 @@ request.get(url, (err, response, body) => {
   let character = [];
   character = movieData.characters;
   let i = 0;
-  while (i < character.length)
-  {
+  while (i < character.length) {
     request.get(character[i], (err, response, body) => {
       if (err) {
         return;
@@ -24,4 +23,5 @@ request.get(url, (err, response, body) => {
       console.log(charData.name);
     });
     i++;
-    }});
+  }
+});
