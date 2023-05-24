@@ -11,13 +11,17 @@ request.get(url, (err, response, body) => {
     return;
   }
   const movieData = JSON.parse(body);
-  for (const character of movieData.characters) {
-    request.get(character, (err, response, body) => {
+  let character = [];
+  character = movieData.characters;
+  let i = 0;
+  while (i < character.length)
+  {
+    request.get(character[i], (err, response, body) => {
       if (err) {
         return;
       }
       const charData = JSON.parse(body);
       console.log(charData.name);
     });
-  }
-});
+    i++;
+    }});
