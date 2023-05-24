@@ -13,11 +13,11 @@ request.get(url, (err, response, body) => {
   const movieData = JSON.parse(body);
   for (const character of movieData.characters) {
     request.get(character, (err, response, body) => {
-	  if (err) {
+      if (err) {
         return;
-	  }
-	  const charData = JSON.parse(body);
-	  console.log(charData.name);
+      }
+      const charData = JSON.parse(body);
+      console.log(charData.name);
     });
   }
 });
