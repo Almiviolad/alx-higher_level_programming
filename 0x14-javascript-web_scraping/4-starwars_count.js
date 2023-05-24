@@ -1,0 +1,18 @@
+#!/usr/bin/node
+/**
+*prints no of movie with passed character
+*/
+const url = process.argv[2];
+const base = 'https://swapi-api.alx-tools.com/api/people/';
+let no = 0;
+const request = require('request');
+request.get(url, (err, response, body) => {
+  if (err) { return; }
+  const moviesData = JSON.parse(body);
+  for (const film of moviesData.results) {
+    if (film.characters.includes(base + '18' + '/')) {
+      no++;
+    }
+  }
+  console.log(no);
+});

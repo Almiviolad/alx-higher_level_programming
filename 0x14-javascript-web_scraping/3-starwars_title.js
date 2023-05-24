@@ -1,6 +1,6 @@
 #!/usr/bin/node
 /**
-*prints status code of a get request
+*prints title of the passed movie id
 */
 const id = process.argv[2];
 const url = 'https://swapi-api.alx-tools.com/api/films/' + id;
