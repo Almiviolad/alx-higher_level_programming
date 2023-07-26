@@ -4,22 +4,22 @@
 
 class Base:
 
-    """Represnt the bas for model class in thus project
+    """Represnt the base for model class in thus project
     Attributes:
         __nb_objects
     """
     __nb_objects = 0
 
     def __init__(self, id=None):
-        """Initilauses the class cinstructor
+        """Initiaises the class cinstructor
         Arguments:
             id( int)
         """
-        if is not None:
+        if id is not None:
             self.id = id
         else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            __nb_objects += 1
+            self.id = __nb_objects
 
     @staticmethod
     def to_json_string(list_dictionaries):
